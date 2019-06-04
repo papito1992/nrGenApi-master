@@ -1,8 +1,12 @@
 package src;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import src.models.Board;
 
 import java.util.List;
 
@@ -12,8 +16,9 @@ public class NumberController {
     @Autowired
     RandomNumberService randomNumberService;
 
-    @RequestMapping("/number")
-    public RandomNumber numberGenerator() {
-        return new RandomNumber(randomNumberService.RandomNumberGenerator());
+    @JsonView
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public void numberGenerator(@RequestBody Board board) {
+
     }
 }
