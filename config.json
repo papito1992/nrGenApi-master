@@ -1,0 +1,8 @@
+{ 
+  "playerName": "xD", // your bot name, should be unique 
+  "teamName": "M&M&P", // your team name 
+  "teamPassword": "mmp", // your team password 
+  "communicationMethod": "REST", // indicating a REST based bot
+  "gameUrl": "http://game.baltic.seb.net", // game server endpoint
+  "communicationRestEndpoint": "http://localhost:8080/" // endpoint where your bot is running 
+}
