@@ -1,6 +1,5 @@
 package src;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,7 @@ public class NumberController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Output numberGenerator(@RequestBody Game game) {
-        Output output = new Output();
+        Output output = new Output("skip");
 
 
         return output;
