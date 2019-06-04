@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 
 import java.util.List;
 
+@JsonView
 public class Board {
 
     @JsonView
@@ -19,7 +20,7 @@ public class Board {
     public List<Route> map;
 
     @JsonView
-    public List<String> cardsOnBoard;
+    public CardsOnBoard cardsOnBoard;
 
     @JsonView
     public int cardsInDeckCount;
@@ -56,11 +57,11 @@ public class Board {
         this.map = map;
     }
 
-    public List<String> getCardsOnBoard() {
+    public CardsOnBoard getCardsOnBoard() {
         return cardsOnBoard;
     }
 
-    public void setCardsOnBoard(List<String> cardsOnBoard) {
+    public void setCardsOnBoard(CardsOnBoard cardsOnBoard) {
         this.cardsOnBoard = cardsOnBoard;
     }
 

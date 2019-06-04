@@ -19,7 +19,7 @@ public class CurrentPlayer {
     public String playerState;
 
     @JsonView
-    public List<CartCard> cartCards;
+    public CartCard cartCards;
 
     @JsonView
     public List<Ticket> tickets;
@@ -59,11 +59,11 @@ public class CurrentPlayer {
         this.playerState = playerState;
     }
 
-    public List<CartCard> getCartCards() {
+    public CartCard getCartCards() {
         return cartCards;
     }
 
-    public void setCartCards(List<CartCard> cartCards) {
+    public void setCartCards(CartCard cartCards) {
         this.cartCards = cartCards;
     }
 
